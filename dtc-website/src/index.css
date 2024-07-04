@@ -1,0 +1,24 @@
+:root {
+    --primary-color: #006CAA;
+    --secondary-color: #9dadbc;
+    --tertiary-color: #3a4856;
+    
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* #00072D
+#5E738F
+#BBDEF0 */
