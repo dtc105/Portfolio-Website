@@ -1,3 +1,5 @@
-.no-overlap {
-    overflow:visible;
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

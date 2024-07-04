@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from 'react'
+import './navbar.css'
 
 function Navbar() {
     return (
@@ -11,7 +12,7 @@ function Navbar() {
                     data-bs-target="#navbar-links"
                     aria-expanded="false"
                     aria-controls="navbar-links"></i>
-                <div className="collapse no-overlap" id="navbar-links">
+                <div className="collapse" id="navbar-links">
                     <ul className="list-group">
                         <li className="list-group-item">
                             <Link to="/">
