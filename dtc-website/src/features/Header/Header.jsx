@@ -34,22 +34,54 @@ function Header() {
                     <ul className="list-group">
                         <li className="list-group-item">
                             <Link to="/">
-                                <button className="btn-dropdown-item">Home</button>
+                                <button 
+                                    className="btn-dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbar-links"
+                                    aria-expanded="false"
+                                    aria-controls="navbar-links">
+                                    Home
+                                </button>
                             </Link>
                         </li>
                         <li className="list-group-item">
                             <Link to="/about">
-                                <button className="btn-dropdown-item">About Me</button>
+                                <button 
+                                    className="btn-dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbar-links"
+                                    aria-expanded="false"
+                                    aria-controls="navbar-links">
+                                    About Me
+                                </button>
                             </Link> 
                         </li>
                         <li className="list-group-item">
                             <Link to="/projects">
-                                <button className="btn-dropdown-item">Projects</button>
+                                <button 
+                                    className="btn-dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbar-links"
+                                    aria-expanded="false"
+                                    aria-controls="navbar-links">
+                                    Projects
+                                </button>
                             </Link>
                         </li>
                         <li className="list-group-item">
                             <Link to="/contact">
-                                <button className="btn-dropdown-item">Contact Me</button>
+                                <button 
+                                    className="btn-dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbar-links"
+                                    aria-expanded="false"
+                                    aria-controls="navbar-links">
+                                    Contact Me
+                                </button>
                             </Link>
                         </li>
                     </ul>
