@@ -1,7 +1,16 @@
-import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { Link, useLocation } from "react-router-dom";
 import './header.css'
 
 function Header() {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const navbarCollapsable = document.getElementById("navbar-links");
+        navbarCollapsable.classList.remove("show");
+    }, [location]);
+
     return (
         <div className="header">
             <div className="header-links-container">
@@ -33,54 +42,22 @@ function Header() {
                     <ul className="list-group">
                         <Link to="/">
                             <li className="list-group-item">
-                                <button 
-                                    className="btn-dropdown-item"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbar-links"
-                                    aria-expanded="false"
-                                    aria-controls="navbar-links">
-                                    Home
-                                </button>
+                                <span>Home</span>
                             </li>     
                         </Link>
                         <Link to="/about">
                             <li className="list-group-item">
-                                <button 
-                                    className="btn-dropdown-item"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbar-links"
-                                    aria-expanded="false"
-                                    aria-controls="navbar-links">
-                                    About Me
-                                </button>
+                                <span>About Me</span>
                             </li> 
                         </Link>  
                         <Link to="/projects">
                             <li className="list-group-item">
-                                <button 
-                                    className="btn-dropdown-item"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbar-links"
-                                    aria-expanded="false"
-                                    aria-controls="navbar-links">
-                                    Projects
-                                </button>
+                                <span>Projects</span>
                             </li>     
                         </Link>
                         <Link to="/contact">
                             <li className="list-group-item">
-                                <button 
-                                    className="btn-dropdown-item"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbar-links"
-                                    aria-expanded="false"
-                                    aria-controls="navbar-links">
-                                    Contact Me
-                                </button>
+                                <span>Contact Me</span>
                             </li>     
                         </Link>
                     </ul>
