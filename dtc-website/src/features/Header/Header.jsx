@@ -20,7 +20,41 @@ function Header() {
             <Link to="/">
                 <h1 className="header-title">Derek Cooper</h1>
             </Link>
-            <Navbar/>
+            <div className="navbar-container">
+                <button className="btn-dropdown"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbar-links"
+                        aria-expanded="false"
+                        aria-controls="navbar-links">
+                    <i className="bi bi-list"></i>
+                </button>
+                
+                <div className="collapse" id="navbar-links">
+                    <ul className="list-group">
+                        <li className="list-group-item">
+                            <Link to="/">
+                                <button className="btn-dropdown-item">Home</button>
+                            </Link>
+                        </li>
+                        <li className="list-group-item">
+                            <Link to="/about">
+                                <button className="btn-dropdown-item">About Me</button>
+                            </Link> 
+                        </li>
+                        <li className="list-group-item">
+                            <Link to="/projects">
+                                <button className="btn-dropdown-item">Projects</button>
+                            </Link>
+                        </li>
+                        <li className="list-group-item">
+                            <Link to="/contact">
+                                <button className="btn-dropdown-item">Contact Me</button>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     );
 }

@@ -23,14 +23,16 @@
     font-size: 20px;
     transform: translate(0, -10px);
     transition: 0.5s ease all;
-    line-height: 0;
+    line-height: 1em;
     margin: auto;
     text-align: center;
 }
 
-a {
-    color: white !important; 
-    text-decoration: none !important;
+.header-link i:hover {
+    color: #fb8b24;
+    font-size: 24px;
+    transform: translate(-1px, -12px);
+    transition: 0.5s ease all;
 }
 
 #linkedin {
@@ -41,16 +43,100 @@ a {
     grid-column: 2 / 3;
 }
 
-.header-link i:hover {
-    color: #fb8b24;
-    font-size: 24px;
-    transform: translate(-1px, -12px);
-    transition: 0.5s ease all;
+a {
+    color: white !important; 
+    text-decoration: none !important;
 }
 
 .header-title {
     text-align: center;
     font-size: 50px;
     cursor: pointer;
+    content: "Derek Cooper"
+}
+
+.btn-dropdown {
+    position: absolute;
+    overflow: hidden;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    font-weight: bolder;
+    transition: 0.125s ease all;
+    right: 48.36px
+}
+
+.btn-dropdown[aria-expanded="true"] {
+    color: var(--primary-color);
+    background-color: white;
+    padding: 0.1em 0.02em;
+    line-height: 0;
+    border-radius: 5px;
+    transition: 0.125s ease all;
+}
+
+.list-group-item {
+    background: var(--tertiary-color) !important;
+    border-radius: 0 !important;
+    border-top: none !important;
+    border-right: none !important;
+    width: 120px;
+}
+
+#navbar-links {
+    position: absolute;
+    top: 120px;
+    right: 5px
+}
+
+.btn-dropdown-item{
+    background: none;
+    border: none;
+    text-align: left;
+    color: white;
+}
+
+@media (max-width: 550px) {
+    .header-links-container {
+        grid-template-columns: 24px;
+        grid-template-rows: 24px 24px;
+        grid-row-gap: 12px;
+        align-items: normal;
+    }
+
+    .header-title {
+        font-size: 40px;
+    }
+
+    .header-link i {
+        font-size: 24px;
+        transform: translate(0, 0);
+    }
+
+    .header-link i:hover {
+        color: white;
+        font-size: 24px;
+        transform: none;
+        transition: none;
+    }
+
+    #linkedin {
+        grid-column: 1;
+        grid-row: 1 / 2;
+    }
+
+    #github {
+        grid-column: 1;
+        grid-row: 2 / 3;
+    }
+
+    .btn-dropdown{
+        right: 10px
+    }
+
+    #navbar-links {
+        right: 0;
+    }
 }
 
