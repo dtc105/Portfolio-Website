@@ -1,7 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
 import './pages.css'
-
+import ImageCarousel from '../components/Carousel/ImageCarousel.jsx';
 
 function Home() {
     
@@ -10,6 +8,7 @@ function Home() {
     return (
         <>
             <p>Home</p> 
+            {/* <ImageCarousel /> */}
         </>
     );
 }

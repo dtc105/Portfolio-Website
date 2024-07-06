@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Navbar from "../../components/Navbar/Navbar.jsx";
 import './header.css'
 
 function Header() {
@@ -32,8 +31,8 @@ function Header() {
                 
                 <div className="collapse" id="navbar-links">
                     <ul className="list-group">
-                        <li className="list-group-item">
-                            <Link to="/">
+                        <Link to="/">
+                            <li className="list-group-item">
                                 <button 
                                     className="btn-dropdown-item"
                                     type="button"
@@ -43,10 +42,10 @@ function Header() {
                                     aria-controls="navbar-links">
                                     Home
                                 </button>
-                            </Link>
-                        </li>
-                        <li className="list-group-item">
-                            <Link to="/about">
+                            </li>     
+                        </Link>
+                        <Link to="/about">
+                            <li className="list-group-item">
                                 <button 
                                     className="btn-dropdown-item"
                                     type="button"
@@ -56,10 +55,10 @@ function Header() {
                                     aria-controls="navbar-links">
                                     About Me
                                 </button>
-                            </Link> 
-                        </li>
-                        <li className="list-group-item">
-                            <Link to="/projects">
+                            </li> 
+                        </Link>  
+                        <Link to="/projects">
+                            <li className="list-group-item">
                                 <button 
                                     className="btn-dropdown-item"
                                     type="button"
@@ -69,10 +68,10 @@ function Header() {
                                     aria-controls="navbar-links">
                                     Projects
                                 </button>
-                            </Link>
-                        </li>
-                        <li className="list-group-item">
-                            <Link to="/contact">
+                            </li>     
+                        </Link>
+                        <Link to="/contact">
+                            <li className="list-group-item">
                                 <button 
                                     className="btn-dropdown-item"
                                     type="button"
@@ -82,8 +81,8 @@ function Header() {
                                     aria-controls="navbar-links">
                                     Contact Me
                                 </button>
-                            </Link>
-                        </li>
+                            </li>     
+                        </Link>
                     </ul>
                 </div>
             </div>
