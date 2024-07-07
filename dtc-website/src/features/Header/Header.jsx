@@ -8,7 +8,9 @@ function Header() {
 
     useEffect(() => {
         const navbarCollapsable = document.getElementById("navbar-links");
+        const navbarButton = document.querySelector(".btn-dropdown");
         navbarCollapsable.classList.remove("show");
+        navbarButton.ariaExpanded = false;
     }, [location]);
 
     return (

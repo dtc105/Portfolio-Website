@@ -111,6 +111,10 @@ a {
         font-size: 40px;
     }
 
+    .btn-dropdown {
+        right: 16px;
+    }
+
     #navbar-links {
         right: 0;
     }
