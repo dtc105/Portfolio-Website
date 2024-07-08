@@ -1,15 +1,13 @@
-.offset-grid {
-    display: grid;
-    margin: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    gap: 8px;
+.container {
+    justify-items: center;
+    align-items: center;
 }
 
-.offset-grid:nth-child(4n+2) {
-    grid-row: span 2;
-}
-
-.img-card{
-
+.title {
+    grid-area: "ti";
+    /* text-align: center; */
+    font-family: monospace;
+    width: fit-content;
+    margin: auto;
+    font-size: minmax(10px, 3vw);
 }

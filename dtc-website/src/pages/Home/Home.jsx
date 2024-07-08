@@ -1,6 +1,6 @@
 import '../pages.css'
 import './home.css'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 // import ImageCarousel from '../../components/Carousel/ImageCarousel.jsx';
 import ImageCard from '../../components/ImageCard/ImageCard.jsx'
 import Image from "./me.jpg"
@@ -8,53 +8,33 @@ import Image from "./me.jpg"
 
 function Home() {
 
+    // Typing effect for title //
+    const [titleContent, setTitleContent] = useState("");
+    const fullTitle = "Hi, I'm Derek!  Welcome to my site!";
+    let string = ""
+    let i = 0;
+    let timeBetweenChar = 0;
 
+    useEffect(typeTitle, []);
+
+    function typeTitle() {
+        if (i < fullTitle.length) {
+            string += fullTitle.charAt(i);
+            setTitleContent(string);
+            i++;
+            timeBetweenChar = Math.floor(Math.random() * 101) + 50;
+            setTimeout(typeTitle, timeBetweenChar);
+        }
+    }
+    // ----------------------- //
 
     return (
         <>
-            <div className="offset-grid">
-                <div className="img-card">
-                    <ImageCard img={Image} 
-                        alt="alt text" 
-                        title="ME1" 
-                        description="description"
-                        date="April 8th, 2024"/>
-                </div> 
-                <div className="img-card">
-                    <ImageCard img={Image} 
-                        alt="alt text" 
-                        title="ME2" 
-                        description="description"
-                        date="April 8th, 2024"/>
-                </div><div className="img-card">
-                    <ImageCard img={Image} 
-                        alt="alt text" 
-                        title="ME3" 
-                        description="description"
-                        date="April 8th, 2024"/>
-                </div><div className="img-card">
-                    <ImageCard img={Image} 
-                        alt="alt text" 
-                        title="ME4" 
-                        description="description"
-                        date="April 8th, 2024"/>
-                </div>
-                <div className="img-card">
-                    <ImageCard img={Image} 
-                        alt="alt text" 
-                        title="ME5" 
-                        description="description"
-                        date="April 8th, 2024"/>
-                </div>
-                <div className="img-card">
-                    <ImageCard img={Image} 
-                        alt="alt text" 
-                        title="ME6" 
-                        description="description"
-                        date="April 8th, 2024"/>
-                </div>
-            </div> 
-            
+            <div className="container">
+                <h2 className="title">
+                    {titleContent}
+                </h2>
+            </div>
         </>
     );
 }

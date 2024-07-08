@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 
 function ImageCard(props) { 
 
-    const imgID = (props.title + props.alt).replace(/\s/g, ""); 
+    const imgID = (props.title + props.alt).replace(/\s/, ""); 
 
     function onHover() {
         const imageText = document.getElementById(imgID);
