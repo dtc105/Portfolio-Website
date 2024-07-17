@@ -1,71 +1,44 @@
-import { useEffect } from 'react';
-import { Link, useLocation } from "react-router-dom";
-import './header.css'
+import styles from './Header.module.css'
+import { Link } from 'react-router-dom'
+import Logo from '../../components/Logo/Logo.jsx'
 
 function Header() {
 
-    const location = useLocation();
+    const activeClass = styles.active;
 
-    useEffect(() => {
-        const navbarCollapsable = document.getElementById("navbar-links");
-        const navbarButton = document.querySelector(".btn-dropdown");
-        navbarCollapsable.classList.remove("show");
-        navbarButton.ariaExpanded = false;
-    }, [location]);
-
+    function handleButtonClick() {
+        const button = document.getElementById("menu-button");
+        const dropdown = document.getElementById("dropdown");
+        button.classList.toggle(activeClass);
+        button.dataset.expanded = button.dataset.expanded === "true" ? "false" : "true";
+        dropdown.classList.toggle("shown");
+        dropdown.classList.toggle("hidden");
+    }
+    
     return (
-        <div className="header">
-            <div className="header-links-container">
-                <div className="header-link" id="linkedin">
-                    <a href="https://www.linkedin.com/in/dtcooper105" target="_blank">
-                        <i className="bi bi-linkedin"></i>
-                    </a>
-                </div>
-                <div className="header-link" id="github">
-                    <a href="https://github.com/dtc105" target="_blank">
-                        <i className="bi bi-github"></i>
-                    </a>
-                </div>
+        <header className={styles.headerContainer}>
+            <div className={styles.left}>
+                <Logo />
+                <Link to="/">
+                    <h1 className={styles.header}>Derek Cooper</h1>
+                </Link>
             </div>
-            <Link to="/">
-                <h1 className="header-title">Derek Cooper</h1>
-            </Link>
-            <div className="navbar-container">
-                <button className="btn-dropdown"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbar-links"
-                        aria-expanded="false"
-                        aria-controls="navbar-links">
+            <div className={styles.right}>
+                <button 
+                    className={styles.button}
+                    id="menu-button"
+                    onClick={handleButtonClick}
+                    data-expanded="false"
+                >
                     <i className="bi bi-list"></i>
                 </button>
-                
-                <div className="collapse" id="navbar-links">
-                    <ul className="list-group">
-                        <Link to="/">
-                            <li className="list-group-item">
-                                <span>Home</span>
-                            </li>     
-                        </Link>
-                        <Link to="/about">
-                            <li className="list-group-item">
-                                <span>About Me</span>
-                            </li> 
-                        </Link>  
-                        <Link to="/projects">
-                            <li className="list-group-item">
-                                <span>Projects</span>
-                            </li>     
-                        </Link>
-                        <Link to="/contact">
-                            <li className="list-group-item">
-                                <span>Contact Me</span>
-                            </li>     
-                        </Link>
-                    </ul>
-                </div>
+                <ul className={`${styles.list} hidden`} id="dropdown">
+                    <Link to="/"><li className={styles.listItem}>Home</li></Link>
+                    <Link to="/projects"><li className={styles.listItem}>Projects</li></Link>
+                    <Link to="/contact"><li className={styles.listItem}>Contact</li></Link>
+                </ul>
             </div>
-        </div>
+        </header>
     );
 }
 

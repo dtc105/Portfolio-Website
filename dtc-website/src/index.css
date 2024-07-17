@@ -1,8 +1,13 @@
 :root {
-    --primary-color: #006CAA;
-    --secondary-color: #9dadbc;
-    --tertiary-color: #34516a;
-    --hover-color: #fb8b24;
+    --header-height: 10vh;
+    --primary-color: #94cad8;
+    --secondary-color: #f0f0f0;
+    --hover-color: #fe6f5e;
+    --hover-color2: #fb8b24;
+    --cool-color: #d87979;
+    
+    font-size: 16px;
+    font-family: Arial, sans-serif;
 }
 
 *,
