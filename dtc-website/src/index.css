@@ -1,14 +1,19 @@
 :root {
-    --header-height: 10vh;
     --primary-color: #94cad8;
     --secondary-color: #f0f0f0;
     --hover-color: #fe6f5e;
     --hover-color2: #fb8b24;
     --cool-color: #d87979;
     
+    --header-height: 6.5rem;
+    
     font-size: 16px;
     font-family: Arial, sans-serif;
 }
+
+/* #00072D
+#5E738F
+#BBDEF0 */
 
 *,
 *::before,
@@ -24,6 +29,3 @@ body {
     height: 100%;
 }
 
-/* #00072D
-#5E738F
-#BBDEF0 */

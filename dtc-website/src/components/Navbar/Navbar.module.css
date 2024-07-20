@@ -1,0 +1,24 @@
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .navbarContainer {
+        width: var(--header-height);
+        height: var(--header-height);
+    }
+
+    .button {
+        transform: scale(2);
+        padding: 0.3rem;
+        background: none;
+        border: 1px solid white;
+        border-radius: 0.3rem;
+    }
+    
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) {
+    .button {
+        display: none;
+    }
+}
